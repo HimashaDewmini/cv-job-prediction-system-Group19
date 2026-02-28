@@ -1,0 +1,312 @@
+/* ===== ABOUT PAGE — Premium Style ===== */
+/* Assumes Inter + Plus Jakarta Sans already imported globally */
+
+.about {
+  padding-top: 68px;
+}
+
+/* Layout */
+.about .section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.about .section-tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #4f46e5;
+  margin-bottom: 12px;
+}
+
+.about .section-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #0f172a;
+  margin-bottom: 22px;
+}
+
+.about .section-title span {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Fade-in */
+.fadein {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fadein--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   INTRO / RESEARCH
+========================= */
+.research-section {
+  padding: 100px 0;
+  background: linear-gradient(170deg, #ffffff 0%, #f0f4ff 55%, #f8f0ff 100%);
+}
+
+.research-lead {
+  max-width: 920px;
+  margin-top: 12px;
+  color: rgba(15, 23, 42, 0.75);
+  line-height: 1.85;
+  font-size: 15.5px;
+}
+
+.research-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.research-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 18px 50px rgba(2, 6, 23, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 70px rgba(2, 6, 23, 0.10);
+}
+
+.research-card__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.research-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99, 102, 241, 0.10);
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  flex-shrink: 0;
+}
+
+.research-card__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.research-card__text {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.72);
+  line-height: 1.75;
+  font-size: 14.5px;
+}
+
+/* =========================
+   PROJECT SCOPE
+========================= */
+.scope-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.scope-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.scope-box {
+  border-radius: 20px;
+  padding: 22px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(2, 6, 23, 0.07);
+  border: 1px solid rgba(2, 6, 23, 0.08);
+}
+
+.scope-box--yes {
+  border-left: 4px solid rgba(16, 185, 129, 0.9);
+}
+
+.scope-box--no {
+  border-left: 4px solid rgba(239, 68, 68, 0.9);
+}
+
+.scope-box__title {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.scope-list {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(15, 23, 42, 0.72);
+  line-height: 1.8;
+  font-size: 14.5px;
+}
+
+/* =========================
+   MOTIVATION
+========================= */
+.motivation-section {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.motivation-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.motivation-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.16);
+  box-shadow: 0 18px 50px rgba(2, 6, 23, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.motivation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 70px rgba(2, 6, 23, 0.10);
+}
+
+.motivation-card__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99, 102, 241, 0.10);
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.motivation-card__title {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.motivation-card__text {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.72);
+  line-height: 1.75;
+  font-size: 14.5px;
+}
+
+/* =========================
+   OBJECTIVES
+========================= */
+.objectives-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.obj-wrap {
+  margin-top: 12px;
+}
+
+.obj-main {
+  background: linear-gradient(
+    135deg,
+    rgba(79, 70, 229, 0.10),
+    rgba(124, 58, 237, 0.08)
+  );
+  border: 1px solid rgba(99, 102, 241, 0.20);
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.obj-main__badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  color: rgba(79, 70, 229, 0.95);
+  background: rgba(79, 70, 229, 0.10);
+  border: 1px solid rgba(79, 70, 229, 0.18);
+  margin-bottom: 10px;
+}
+
+.obj-main__text {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.78);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.obj-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.obj-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  box-shadow: 0 18px 50px rgba(2, 6, 23, 0.07);
+}
+
+.obj-card__title {
+  margin: 0 0 8px 0;
+  font-size: 15.5px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.obj-card__text {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.72);
+  line-height: 1.75;
+  font-size: 14.5px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .about .section-inner {
+    padding: 0 24px;
+  }
+
+  .research-grid,
+  .motivation-grid,
+  .obj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scope-grid {
+    grid-template-columns: 1fr;
+  }
+}
