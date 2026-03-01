@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { id: "features", label: "Features", type: "page", to: "/feature" },
   { id: "results", label: "Results", type: "page", to: "/results" },
   { id: "team", label: "Team", type: "page", to: "/team" },
+  { id: "techstack", label: "Tech Stack", type: "page", to: "/techstack" },
 ];
 
 export default function Navbar({ activeSection }) {

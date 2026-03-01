@@ -7,6 +7,7 @@ import Team from './pages/Team/Team';
 import Methodology from './pages/Methodology/Methodology';
 import FeaturesSection from './pages/FeaturesSection/FeaturesSection';
 import ResultsSection from './pages/ResultsSection/ResultsSection';
+import TechStackSection from './pages/Techstacksection/Techstacksection';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/methodology" element={<Methodology />} />
           <Route path ="/feature" element ={<FeaturesSection/>}/>
           <Route path ="/results" element ={<ResultsSection/>}/>
+          <Route path ="/techstack" element ={<TechStackSection/>}/>
         </Routes>
 
 

@@ -5,7 +5,7 @@ export default function Footer() {
 
   const chips = [
     { icon: "📄", label: "CV Analysis Engine" },
-    { icon: "🧠", label: "AI Skill Extraction" },
+    { icon: "🧠", label: "Skill Extraction" },
     { icon: "🎯", label: "Job Recommendation" },
     { icon: "🛡️", label: "Blind Mode Fairness" },
   ];
@@ -92,20 +92,7 @@ export default function Footer() {
                 <span className="as-linkHint">↗</span>
               </a>
 
-              <button
-                type="button"
-                className="as-linkBtn"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/HimashaDewmini/cv-job-prediction-system-Group19",
-                    "_blank",
-                  )
-                }
-              >
-                <span className="as-linkIcon">🎥</span>
-                <span className="as-linkText">System Demo / Presentation</span>
-                <span className="as-linkHint">↗</span>
-              </button>
+              
             </div>
 
             <div className="as-noteCard">
