@@ -416,7 +416,7 @@ export default function ArchitectureSection() {
                 <div className="sidebar-card">
                   <div className="sidebar-card__title">📏 Seniority Levels</div>
                   {[
-                    { level: "intern_junior", color: "#4f46e5", kw: "intern · trainee · graduate · fresher · junior" },
+                    { level: "intern or junior", color: "#4f46e5", kw: "intern · trainee · graduate · fresher · junior" },
                     { level: "mid",           color: "#f59e0b", kw: "2–4 years experience" },
                     { level: "senior",         color: "#ef4444", kw: "senior · lead · architect · 5+ yrs" },
                   ].map((lv) => (

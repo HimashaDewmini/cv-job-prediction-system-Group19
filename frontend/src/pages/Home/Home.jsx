@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
+
 
 /* ── tiny hook for scroll-in animations ── */
 /* ── tiny hook for scroll-in animations ── */
@@ -17,7 +19,7 @@ function useInView(threshold = 0.12) {
       ([e]) => {
         if (e.isIntersecting) setVisible(true);
       },
-      { threshold }
+      { threshold },
     );
 
     obs.observe(node);
@@ -178,6 +180,7 @@ const SURVEY_BARS = [
 ];
 
 export default function HomePage({ onGetStarted }) {
+    const navigate = useNavigate();
   return (
     <main className="home">
       <Navbar />
@@ -211,13 +214,10 @@ export default function HomePage({ onGetStarted }) {
               <button className="btn btn--primary" onClick={onGetStarted}>
                 Analyse My CV →
               </button>
+
               <button
                 className="btn btn--ghost"
-                onClick={() =>
-                  document
-                    .getElementById("methodology")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => navigate("/methodology")}
               >
                 See Methodology
               </button>
