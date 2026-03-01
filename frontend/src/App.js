@@ -4,7 +4,8 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Architecture from './pages/Architecture/Architecture';
 import Team from './pages/Team/Team'; 
-
+import Methodology from './pages/Methodology/Methodology';
+import FeaturesSection from './pages/FeaturesSection/FeaturesSection';
 
 
 const App = () => {
@@ -16,6 +17,8 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/architecture" element={<Architecture />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/methodology" element={<Methodology />} />
+          <Route path ="/feature" element ={<FeaturesSection/>}/>
         </Routes>
 
 
