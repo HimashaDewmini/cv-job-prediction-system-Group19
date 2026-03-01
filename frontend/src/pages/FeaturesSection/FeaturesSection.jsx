@@ -1,5 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import "./FeaturesSection.css";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 /* ── Scroll-in animation hook ── */
 function useInView(threshold = 0.12) {
@@ -171,6 +173,8 @@ const FEATURE_GROUPS = [
 
 export default function FeaturesSection() {
   return (
+    <>
+        <Navbar />
     <section className="featSection" id="features">
       <div className="featBlob featBlob--1" />
       <div className="featBlob featBlob--2" />
@@ -218,6 +222,9 @@ export default function FeaturesSection() {
           ))}
         </div>
       </div>
+        
     </section>
+     <Footer />
+       </>
   );
 }
