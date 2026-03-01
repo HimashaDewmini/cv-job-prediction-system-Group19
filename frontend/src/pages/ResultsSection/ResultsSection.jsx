@@ -37,7 +37,7 @@ function FadeIn({ children, delay = 0, className = "" }) {
 const RESULTS_STATS = [
   { value: "168+", label: "CVs Analyzed", sub: "Tested using real student CV samples" },
   { value: "27+", label: "Validation Checks", sub: "Rule-based + AI criteria combined" },
-  { value: "5", label: "HR Companies Surveyed", sub: "Local recruiter expectations captured" },
+  { value: "25", label: "HR Companies Surveyed", sub: "Local recruiter expectations captured" },
   { value: "9", label: "LLM Criteria", sub: "Structured scoring for professionalism & clarity" },
 ];
 
