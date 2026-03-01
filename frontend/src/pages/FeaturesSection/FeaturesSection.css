@@ -3,9 +3,9 @@
 .featSection {
   position: relative;
   overflow: hidden;
-  padding: 70px 0;
+  padding: 72px 0;
   background: linear-gradient(180deg, #ffffff 0%, #f7faff 55%, #ffffff 100%);
-  border-top: 1px solid rgba(15, 23, 42, 0.05);
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .featInner {
@@ -16,7 +16,9 @@
   z-index: 2;
 }
 
-/* fade-in */
+/* ------------------------------
+   FADE IN
+------------------------------ */
 .fadein {
   opacity: 0;
   transform: translateY(26px);
@@ -27,11 +29,13 @@
   transform: translateY(0);
 }
 
-/* header */
+/* ------------------------------
+   HEADER
+------------------------------ */
 .featTag {
   font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
+  font-weight: 900;
+  letter-spacing: 2.6px;
   text-transform: uppercase;
   color: #2563eb;
   margin: 0 0 12px;
@@ -55,7 +59,7 @@
 }
 
 .featLead {
-  margin: 0 0 26px;
+  margin: 0 0 30px;
   max-width: 860px;
   color: rgba(15, 23, 42, 0.60);
   font-size: 16px;
@@ -63,7 +67,9 @@
   font-weight: 650;
 }
 
-/* background decorations */
+/* ------------------------------
+   BACKGROUND DECOR
+------------------------------ */
 .featBlob {
   position: absolute;
   border-radius: 999px;
@@ -71,6 +77,7 @@
   pointer-events: none;
   z-index: 1;
 }
+
 .featBlob--1 {
   width: 520px;
   height: 520px;
@@ -78,6 +85,7 @@
   left: -160px;
   background: radial-gradient(circle, rgba(37, 99, 235, 0.14), transparent 70%);
 }
+
 .featBlob--2 {
   width: 520px;
   height: 520px;
@@ -85,17 +93,20 @@
   right: -170px;
   background: radial-gradient(circle, rgba(124, 58, 237, 0.12), transparent 70%);
 }
+
 .featDots {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(rgba(37,99,235,0.14) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(37, 99, 235, 0.14) 1px, transparent 1px);
   background-size: 34px 34px;
   opacity: 0.18;
   z-index: 1;
 }
 
-/* groups */
+/* ------------------------------
+   GROUPS
+------------------------------ */
 .featGroups {
   display: flex;
   flex-direction: column;
@@ -103,24 +114,36 @@
 }
 
 .featGroup {
+  --accent: #2563eb;
+  position: relative;
   border-radius: 26px;
   background: #ffffff;
   border: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow: 0 14px 34px rgba(2, 6, 23, 0.07);
   overflow: hidden;
-  position: relative;
 }
 
 .featGroup::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    900px 260px at 50% 0%,
-    color-mix(in srgb, var(--accent) 12%, transparent),
-    transparent 70%
-  );
+  inset: -2px;
+  border-radius: 28px;
+  background: radial-gradient(900px 260px at 50% 0%, rgba(37,99,235,0.14), transparent 70%);
   opacity: 0.9;
+  pointer-events: none;
+}
+
+/* small accent line at top */
+.featGroup::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 0;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(37,99,235,0.32);
+  opacity: 0.7;
   pointer-events: none;
 }
 
@@ -128,9 +151,13 @@
   display: flex;
   gap: 14px;
   align-items: flex-start;
-  padding: 20px 20px 10px;
+  padding: 22px 22px 12px;
   position: relative;
   z-index: 2;
+}
+
+.featGroup__titles {
+  min-width: 0;
 }
 
 .featGroup__badge {
@@ -142,9 +169,9 @@
   font-weight: 900;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  background: color-mix(in srgb, var(--accent) 10%, white);
-  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
-  color: color-mix(in srgb, var(--accent) 90%, #0f172a);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  color: rgba(37, 99, 235, 0.95);
   flex-shrink: 0;
 }
 
@@ -155,30 +182,33 @@
   letter-spacing: -0.6px;
   color: #0f172a;
   font-size: 20px;
+  line-height: 1.25;
 }
 
 .featGroup__desc {
-  margin: 6px 0 0;
-  max-width: 840px;
+  margin: 8px 0 0;
+  max-width: 860px;
   color: rgba(15, 23, 42, 0.62);
   font-weight: 650;
   line-height: 1.75;
   font-size: 14px;
 }
 
-/* cards grid inside group */
+/* ------------------------------
+   CARDS GRID
+------------------------------ */
 .featGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
-  padding: 14px 20px 20px;
+  padding: 14px 22px 22px;
   position: relative;
   z-index: 2;
 }
 
 .featCard {
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(243, 247, 255, 0.62), #ffffff 70%);
+  background: linear-gradient(180deg, rgba(243, 247, 255, 0.62), #ffffff 72%);
   border: 1px solid rgba(15, 23, 42, 0.08);
   padding: 16px 14px 14px;
   box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
@@ -198,8 +228,8 @@
   border-radius: 16px;
   display: grid;
   place-items: center;
-  background: color-mix(in srgb, var(--accent) 10%, white);
-  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  background: rgba(37, 99, 235, 0.10);
+  border: 1px solid rgba(37, 99, 235, 0.18);
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -210,30 +240,71 @@
   color: #0f172a;
   letter-spacing: -0.4px;
   margin-bottom: 10px;
+  line-height: 1.25;
 }
 
 .featCard__list {
   margin: 0;
-  padding-left: 18px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
   color: rgba(15, 23, 42, 0.62);
   font-size: 13px;
-  line-height: 1.75;
+  line-height: 1.7;
   font-weight: 650;
 }
 
-/* responsive */
+.featCard__list li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.featCard__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.55);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
 @media (max-width: 1100px) {
   .featGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 1024px) {
   .featInner {
     padding: 0 24px;
   }
 }
+
+@media (max-width: 720px) {
+  .featGroup__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @media (max-width: 640px) {
+  .featInner {
+    padding: 0 18px;
+  }
   .featGrid {
     grid-template-columns: 1fr;
+  }
+  .featGroup__head {
+    padding: 20px 18px 10px;
+  }
+  .featGrid {
+    padding: 12px 18px 18px;
   }
 }
