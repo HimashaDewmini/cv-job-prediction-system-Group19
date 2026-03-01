@@ -6,6 +6,7 @@ import Architecture from './pages/Architecture/Architecture';
 import Team from './pages/Team/Team'; 
 import Methodology from './pages/Methodology/Methodology';
 import FeaturesSection from './pages/FeaturesSection/FeaturesSection';
+import ResultsSection from './pages/ResultsSection/ResultsSection';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/methodology" element={<Methodology />} />
           <Route path ="/feature" element ={<FeaturesSection/>}/>
+          <Route path ="/results" element ={<ResultsSection/>}/>
         </Routes>
 
 

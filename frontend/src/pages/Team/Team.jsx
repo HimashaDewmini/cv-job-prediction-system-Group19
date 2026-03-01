@@ -5,7 +5,7 @@ import Footer from "../../components/Footer/Footer";
 
 /* ✅ Import images from assets folder */
 import member1Img from "../../assets/member1.png";
-import member2Img from "../../assets/member2.png";
+import member2Img from "../../assets/member2.jpg";
 import member3Img from "../../assets/member3.png";
 
 import sup1Img from "../../assets/supervisor1.jpeg";

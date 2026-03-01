@@ -11,7 +11,7 @@ const NAV_LINKS = [
   
   { id: "methodology", label: "Methodology", type: "page", to: "/methodology" },
   { id: "features", label: "Features", type: "page", to: "/feature" },
-  { id: "results", label: "Results", type: "section" },
+  { id: "results", label: "Results", type: "page", to: "/results" },
   { id: "team", label: "Team", type: "page", to: "/team" },
 ];
 

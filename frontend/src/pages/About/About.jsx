@@ -95,9 +95,12 @@ export default function AboutPage() {
                   <h3 className="research-card__title">Our Research Solution</h3>
                 </div>
                 <p className="research-card__text">
-                  This study proposes a localized and integrated platform that first improves CV quality using local HR criteria
-                  and then recommends suitable IT jobs from Sri Lankan portals using real market demand.
-                </p>
+  This study proposes a localized and integrated platform that first evaluates and improves CV quality based on Sri Lankan 
+  HR validation criteria. The system provides detailed feedback by identifying missing or weak elements such as technical skills,
+   professional summary, GitHub links, formatting quality, and quantifiable achievements, and suggests specific improvements to enhance 
+   the CV. After validation and feedback, the platform recommends suitable IT job opportunities from Sri Lankan job portals by matching 
+   the candidate’s validated skills and profile with real market demand.
+</p>
               </div>
             </FadeIn>
           </div>
