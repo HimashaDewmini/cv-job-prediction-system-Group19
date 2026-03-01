@@ -167,355 +167,310 @@
 }
 
 /* ============================
-   DIAGRAM 01 — USECASE CANVAS
+   USE CASE FLOW — CLEAN + RESPONSIVE
 ============================ */
 
-.usecase-canvas {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 16px;
-  padding: 18px 22px 22px;
-  position: relative;
-  z-index: 2;
+.usecase-canvas{
+  display:grid;
+  grid-template-columns: 240px 1fr;
+  gap: 18px;
+  padding: 18px 20px 22px;
 }
 
-.actor-col {
-  position: relative;
-  display: grid;
-  align-content: start;
-  gap: 10px;
-}
-
-.actor-box {
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(243, 247, 255, 0.62), #ffffff 72%);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
-  padding: 16px 14px;
-  display: grid;
-  gap: 8px;
-}
-
-.actor-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  background: rgba(37, 99, 235, 0.10);
-  border: 1px solid rgba(37, 99, 235, 0.18);
-  font-size: 18px;
-}
-
-.actor-name {
-  font-weight: 900;
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  color: #0f172a;
-  letter-spacing: -0.4px;
-}
-
-.actor-line {
-  width: 3px;
-  height: 100%;
-  margin-left: 20px;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.22);
-}
-
-/* system boundary */
-.system-boundary {
-  border-radius: 22px;
-  background: rgba(2, 6, 23, 0.02);
-  border: 1px dashed rgba(15, 23, 42, 0.16);
-  padding: 16px;
-  position: relative;
-}
-
-.system-boundary__label {
-  position: absolute;
-  top: -12px;
-  left: 14px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 1.3px;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  color: rgba(15, 23, 42, 0.75);
-}
-
-/* UC pills and lines */
-.uc-horiz-line {
-  height: 2px;
-  flex: 1;
-  background: rgba(15, 23, 42, 0.12);
-  border-radius: 999px;
-}
-
-.uc-horiz-line--short {
-  width: 32px;
-  flex: none;
-}
-
-.uc-pill {
-  border-radius: 999px;
-  padding: 10px 12px;
-  font-weight: 850;
-  font-size: 13px;
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  background: #ffffff;
-  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
-}
-
-.uc-pill__fn {
-  margin-left: 10px;
-  font-size: 11px;
-  font-weight: 750;
-  color: rgba(15, 23, 42, 0.55);
-  white-space: nowrap;
-}
-
-.uc-pill--upload { border-color: rgba(37,99,235,0.18); }
-.uc-pill--blind  { border-color: rgba(245,158,11,0.22); }
-.uc-pill--preview{ border-color: rgba(16,185,129,0.22); }
-
-.uc-trigger-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-/* fork layout */
-.uc-fork {
-  margin-top: 16px;
-  display: grid;
-  gap: 12px;
-  position: relative;
-}
-
-.uc-fork__stem {
-  width: 3px;
-  height: 20px;
-  margin: 0 auto;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.16);
-}
-
-.uc-fork__branches {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.uc-fork__branch {
-  display: grid;
-  gap: 10px;
-}
-
-.uc-fork__arm {
-  height: 2px;
-  background: rgba(15, 23, 42, 0.12);
-  border-radius: 999px;
-}
-
-.uc-node {
-  border-radius: 18px;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
-  padding: 14px 14px 12px;
-}
-
-.uc-node__icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  font-size: 18px;
-  background: rgba(15, 23, 42, 0.03);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  margin-bottom: 10px;
-}
-
-.uc-node__name {
-  font-weight: 900;
-  color: #0f172a;
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  letter-spacing: -0.4px;
-  margin-bottom: 6px;
-}
-
-.uc-node__detail {
-  margin: 0 0 10px;
-  color: rgba(15, 23, 42, 0.62);
-  font-size: 13px;
-  line-height: 1.7;
-  font-weight: 650;
-}
-
-.uc-node__fn {
-  display: inline-block;
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 10px;
-  background: rgba(2, 6, 23, 0.03);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-/* merge */
-.uc-fork__merge {
-  display: grid;
-  gap: 10px;
-  align-items: center;
-  justify-items: center;
-}
-
-.uc-fork__merge-lines {
+/* Actor */
+.actor-col{ display:flex; flex-direction:column; align-items:center; }
+.actor-box{
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.uc-fork__merge-arm {
-  height: 2px;
-  background: rgba(15, 23, 42, 0.12);
-  border-radius: 999px;
-}
-
-.uc-fork__merge-stem {
-  width: 3px;
-  height: 22px;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.16);
-}
-
-/* converge node */
-.uc-converge-node {
-  margin-top: 12px;
   border-radius: 18px;
-  background: #ffffff;
+  padding: 14px 14px;
   border: 1px solid rgba(15, 23, 42, 0.10);
-  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
-  padding: 14px 14px 12px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(2,6,23,0.06);
 }
-
-.uc-converge-node__icon {
-  width: 40px;
-  height: 40px;
+.actor-avatar{
+  width: 44px; height: 44px;
   border-radius: 16px;
-  display: grid;
-  place-items: center;
-  font-size: 18px;
-  background: rgba(14, 165, 233, 0.10);
-  border: 1px solid rgba(14, 165, 233, 0.18);
+  display:grid; place-items:center;
+  background: rgba(37,99,235,0.10);
+  border: 1px solid rgba(37,99,235,0.18);
   margin-bottom: 10px;
 }
-
-.uc-converge-node__name {
-  font-weight: 900;
-  color: #0f172a;
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  margin-bottom: 6px;
-}
-
-.uc-converge-node__detail {
-  margin: 0 0 10px;
-  color: rgba(15, 23, 42, 0.62);
-  font-size: 13px;
-  line-height: 1.7;
-  font-weight: 650;
-}
-
-.uc-converge-node__fn {
-  display: inline-block;
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 10px;
-  background: rgba(14, 165, 233, 0.10);
-  border: 1px solid rgba(14, 165, 233, 0.18);
-}
-
-/* output fork */
-.uc-output-fork {
-  margin-top: 14px;
-  display: grid;
-  gap: 12px;
-}
-
-.uc-output-fork__stem {
-  width: 3px;
-  height: 18px;
-  margin: 0 auto;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.16);
-}
-
-.uc-output-fork__row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.uc-output-node {
-  border-radius: 18px;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
-  padding: 14px;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-
-.uc-output-node__name {
-  font-weight: 900;
-  color: #0f172a;
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  margin-bottom: 6px;
-}
-
-.uc-output-node__detail {
-  color: rgba(15, 23, 42, 0.62);
-  font-size: 12px;
-  font-weight: 650;
-  line-height: 1.65;
-  margin-top: 3px;
-}
-
-.uc-output-node__fn {
-  display: inline-block;
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 10px;
-  background: rgba(2, 6, 23, 0.03);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-.uc-output-node--inline {
+.actor-name{ font-weight: 900; color:#0f172a; }
+.actor-line{
+  width: 2px;
   flex: 1;
+  margin-top: 12px;
+  background: rgba(37,99,235,0.18);
+  border-radius: 99px;
 }
 
-/* secondary flows */
-.uc-flow-secondary {
-  margin-top: 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* System boundary */
+.system-boundary{
+  position: relative;
+  border-radius: 22px;
+  padding: 18px 16px 18px;
+  border: 1px dashed rgba(37,99,235,0.28);
+  background: linear-gradient(180deg, rgba(37,99,235,0.06), rgba(2,6,23,0.02));
+  overflow: hidden;
+}
+.system-boundary__label{
+  display:inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  background: rgba(37,99,235,0.10);
+  border: 1px solid rgba(37,99,235,0.18);
+  color: rgba(37,99,235,0.95);
+  margin-bottom: 14px;
+}
+
+/* Trigger */
+.uc-trigger-row{
+  display:flex;
+  align-items:center;
+  gap: 12px;
   flex-wrap: wrap;
 }
-
-.uc-secondary-arrow {
+.uc-horiz-line{
+  flex: 1;
+  height: 2px;
+  background: rgba(37,99,235,0.16);
+  border-radius: 99px;
+  min-width: 40px;
+}
+.uc-pill{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(15,23,42,0.10);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(2,6,23,0.06);
   font-weight: 900;
-  color: rgba(15, 23, 42, 0.45);
+  color:#0f172a;
+  white-space: normal;
+}
+.uc-pill__fn{
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0.65;
+  white-space: normal;
 }
 
+/* Fork area */
+.uc-fork{ margin-top: 14px; }
+.uc-fork__branches{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.uc-fork__stem,
+.uc-fork__arm,
+.uc-fork__merge-stem,
+.uc-fork__merge-arm{
+  display:none; /* hide complicated lines (cleaner + no cut) */
+}
+
+/* Nodes */
+.uc-node{
+  border-radius: 18px;
+  border: 2px solid rgba(79,70,229,0.35);
+  background: #fff;
+  padding: 14px 14px 12px;
+  box-shadow: 0 12px 26px rgba(2,6,23,0.06);
+}
+.uc-node__icon{ font-size: 20px; margin-bottom: 8px; }
+.uc-node__name{
+  font-weight: 1000;
+  color:#0f172a;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.uc-node__detail{
+  margin-top: 6px;
+  color: rgba(15,23,42,0.62);
+  font-weight: 650;
+  line-height: 1.65;
+  font-size: 13px;
+}
+.uc-node__fn{
+  display:inline-block;
+  margin-top: 10px;
+  padding: 7px 10px;
+  border-radius: 12px;
+  background: rgba(2,6,23,0.04);
+  border: 1px solid rgba(2,6,23,0.08);
+  font-weight: 900;
+}
+
+/* Converge node */
+.uc-converge-node{
+  margin-top: 14px;
+  border-radius: 18px;
+  border: 2px solid rgba(14,165,233,0.40);
+  background: #fff;
+  padding: 14px 14px 12px;
+  box-shadow: 0 12px 26px rgba(2,6,23,0.06);
+}
+.uc-converge-node__icon{ font-size: 20px; margin-bottom: 8px; }
+.uc-converge-node__name{
+  font-weight: 1000;
+  color:#0f172a;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.uc-converge-node__detail{
+  margin-top: 6px;
+  color: rgba(15,23,42,0.62);
+  font-weight: 650;
+  line-height: 1.65;
+  font-size: 13px;
+}
+.uc-converge-node__fn{
+  display:inline-block;
+  margin-top: 10px;
+  padding: 7px 10px;
+  border-radius: 12px;
+  background: rgba(2,6,23,0.04);
+  border: 1px solid rgba(2,6,23,0.08);
+  font-weight: 900;
+}
+
+/* Outputs */
+.uc-output-fork{ margin-top: 14px; }
+.uc-output-fork__stem{ display:none; }
+
+.uc-output-fork__row{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.uc-output-node{
+  border-radius: 18px;
+  background: #fff;
+  border: 2px solid rgba(16,185,129,0.35);
+  padding: 14px;
+  box-shadow: 0 12px 26px rgba(2,6,23,0.06);
+  display:flex;
+  gap: 10px;
+  align-items:flex-start;
+}
+.uc-output-node span{ font-size: 20px; margin-top: 2px; }
+.uc-output-node__name{
+  font-weight: 1000;
+  color:#0f172a;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.uc-output-node__detail{
+  margin-top: 6px;
+  color: rgba(15,23,42,0.62);
+  font-weight: 650;
+  line-height: 1.65;
+  font-size: 13px;
+}
+.uc-output-node__fn{
+  display:inline-block;
+  margin-top: 10px;
+  padding: 7px 10px;
+  border-radius: 12px;
+  background: rgba(2,6,23,0.04);
+  border: 1px solid rgba(2,6,23,0.08);
+  font-weight: 900;
+}
+
+/* Secondary flows */
+.uc-flow-secondary{
+  margin-top: 14px;
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  flex-wrap: wrap;
+}
+.uc-secondary-arrow{ opacity: 0.5; font-weight: 900; }
+.uc-horiz-line--short{ display:none; }
+.uc-output-node--inline{ flex: 1; }
+
+/* Step badges */
+.uc-step{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 34px;
+  height: 22px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  background: rgba(79,70,229,0.10);
+  border: 1px solid rgba(79,70,229,0.20);
+  color: rgba(79,70,229,1);
+}
+.uc-step--purple{
+  background: rgba(124,58,237,0.10);
+  border-color: rgba(124,58,237,0.20);
+  color: rgba(124,58,237,1);
+}
+.uc-step--cyan{
+  background: rgba(14,165,233,0.10);
+  border-color: rgba(14,165,233,0.20);
+  color: rgba(14,165,233,1);
+}
+.uc-step--green{
+  background: rgba(16,185,129,0.10);
+  border-color: rgba(16,185,129,0.20);
+  color: rgba(16,185,129,1);
+}
+.uc-step--amber{
+  background: rgba(245,158,11,0.12);
+  border-color: rgba(245,158,11,0.24);
+  color: rgba(245,158,11,1);
+}
+
+/* ============================
+   RESPONSIVE: MOBILE FLOW (stack everything)
+============================ */
+@media (max-width: 900px){
+  .usecase-canvas{
+    grid-template-columns: 1fr;
+    padding: 14px 14px 18px;
+  }
+  .actor-line{ display:none; }
+
+  .uc-fork__branches{
+    grid-template-columns: 1fr;
+  }
+  .uc-output-fork__row{
+    grid-template-columns: 1fr;
+  }
+
+  /* Add simple arrows between blocks */
+  .uc-node,
+  .uc-converge-node,
+  .uc-output-node{
+    position: relative;
+  }
+  .uc-node::before,
+  .uc-converge-node::before,
+  .uc-output-node::before{
+    content:"↓";
+    position:absolute;
+    top:-18px;
+    left: 12px;
+    font-weight: 1000;
+    color: rgba(37,99,235,0.55);
+  }
+  .uc-fork{ margin-top: 10px; }
+}
 /* ============================
    DIAGRAM 02 — JOBREC LAYOUT
 ============================ */
@@ -812,6 +767,174 @@
     grid-template-columns: 46px 34px 1fr;
   }
   .jobrec-step__chevron {
+    display: none;
+  }
+}
+/* ============================
+   USECASE FLOW — CLARITY + RESPONSIVE PATCH
+============================ */
+
+/* Make the canvas breathe */
+.usecase-canvas {
+  gap: 18px;
+  padding: 18px 22px 26px;
+}
+
+/* Actor column: keep compact */
+.actor-box {
+  position: sticky;
+  top: 90px; /* navbar height friendly */
+}
+
+/* System boundary: clearer */
+.system-boundary {
+  background: linear-gradient(180deg, rgba(37,99,235,0.06), rgba(2,6,23,0.02));
+  border: 1px dashed rgba(37, 99, 235, 0.24);
+}
+
+/* Trigger row: prevent cut */
+.uc-trigger-row {
+  flex-wrap: wrap;
+}
+.uc-pill {
+  max-width: 100%;
+  white-space: normal;
+}
+.uc-pill__fn {
+  white-space: normal;
+}
+
+/* Parallel branches: equal height & alignment */
+.uc-fork__branches {
+  align-items: stretch;
+}
+.uc-node,
+.uc-converge-node,
+.uc-output-node {
+  height: 100%;
+}
+
+/* Make nodes look like clear steps */
+.uc-node,
+.uc-converge-node,
+.uc-output-node {
+  position: relative;
+}
+.uc-node::after,
+.uc-converge-node::after,
+.uc-output-node::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(600px 220px at 30% 0%, rgba(37,99,235,0.08), transparent 60%);
+  opacity: 0.7;
+}
+
+/* Function tag style: readable */
+.uc-node__fn,
+.uc-converge-node__fn,
+.uc-output-node__fn {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 700;
+}
+
+/* Make lines softer, consistent */
+.uc-horiz-line,
+.uc-fork__arm,
+.uc-fork__merge-arm {
+  background: rgba(37, 99, 235, 0.14);
+}
+.uc-fork__stem,
+.uc-fork__merge-stem,
+.uc-output-fork__stem {
+  background: rgba(37, 99, 235, 0.22);
+}
+
+/* Output row: keep neat */
+.uc-output-fork__row {
+  align-items: stretch;
+}
+
+/* ============================
+   MOBILE: convert diagram → vertical steps
+============================ */
+@media (max-width: 900px) {
+  .usecase-canvas {
+    grid-template-columns: 1fr;
+    padding: 16px 16px 22px;
+  }
+
+  /* Actor becomes header style */
+  .actor-col {
+    display: block;
+  }
+  .actor-box {
+    position: relative;
+    top: auto;
+  }
+  .actor-line {
+    display: none;
+  }
+
+  /* System boundary label doesn't overlap */
+  .system-boundary__label {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 10px;
+    display: inline-flex;
+  }
+
+  /* Make the trigger centered */
+  .uc-trigger-row {
+    justify-content: flex-start;
+  }
+  .uc-horiz-line {
+    display: none; /* remove long line that causes cut */
+  }
+
+  /* STACK parallel validations vertically */
+  .uc-fork__branches {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make the merge visuals simpler */
+  .uc-fork__merge-lines,
+  .uc-fork__merge-stem,
+  .uc-fork__stem {
+    display: none;
+  }
+
+  /* Add an arrow between blocks visually */
+  .uc-node,
+  .uc-converge-node,
+  .uc-output-node {
+    margin-top: 10px;
+  }
+  .uc-node::before,
+  .uc-converge-node::before,
+  .uc-output-node::before {
+    content: "↓";
+    position: absolute;
+    top: -18px;
+    left: 14px;
+    font-weight: 900;
+    color: rgba(37, 99, 235, 0.55);
+  }
+
+  /* Output row becomes column */
+  .uc-output-fork__row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Secondary flows stack nicely */
+  .uc-flow-secondary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .uc-secondary-arrow {
     display: none;
   }
 }
