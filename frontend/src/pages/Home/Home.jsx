@@ -4,19 +4,26 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 /* ── tiny hook for scroll-in animations ── */
+/* ── tiny hook for scroll-in animations ── */
 function useInView(threshold = 0.12) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
+
   useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
     const obs = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting) setVisible(true);
       },
-      { threshold },
+      { threshold }
     );
-    if (ref.current) obs.observe(ref.current);
+
+    obs.observe(node);
     return () => obs.disconnect();
-  }, []);
+  }, [threshold]); // ✅ include threshold
+
   return [ref, visible];
 }
 

@@ -3,6 +3,14 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./Team.css";
 import Footer from "../../components/Footer/Footer";
 
+/* ✅ Import images from assets folder */
+import member1Img from "../../assets/member1.png";
+import member2Img from "../../assets/member2.png";
+import member3Img from "../../assets/member3.png";
+
+import sup1Img from "../../assets/supervisor1.jpeg";
+import sup2Img from "../../assets/supervisor2.webp";
+
 const TEAM = [
   {
     name: "K.P.V. Perera",
@@ -13,6 +21,7 @@ const TEAM = [
     phone: "071-3399389",
     email: "ict21897@fot.sjp.ac.lk",
     accent: "#2563eb",
+    photo: member1Img, // ✅ added
   },
   {
     name: "K.K.H. Dewmini",
@@ -23,6 +32,7 @@ const TEAM = [
     phone: "076-7317696",
     email: "ict21825@fot.sjp.ac.lk",
     accent: "#4f46e5",
+    photo: member2Img, // ✅ added
   },
   {
     name: "N.H.A.K.D. Dharmarathna",
@@ -33,25 +43,32 @@ const TEAM = [
     phone: "072-8250339",
     email: "ict21828@fot.sjp.ac.lk",
     accent: "#0ea5e9",
+    photo: member3Img, // ✅ added
   },
 ];
 
 const SUPERVISORS = [
   {
     badge: "PRINCIPAL SUPERVISOR",
-    name: "Dr. Chamara",
+    name: "Dr. D. L. Chamara Pramod Liyanage",
     role: "University of Sri Jayewardenepura",
     email: "dlchamara@sjp.ac.lk",
-    quote: "Guiding Group 19 through technical orchestration and research methodology validation.",
-    gradient: "linear-gradient(135deg, #2563eb 0%, #4f46e5 60%, #7c3aed 100%)",
+    quote:
+      "Guiding Group 19 through technical orchestration and research methodology validation.",
+    gradient:
+      "linear-gradient(135deg, #2563eb 0%, #4f46e5 60%, #7c3aed 100%)",
+    photo: sup1Img, // ✅ added
   },
   {
     badge: "CO-SUPERVISOR",
     name: "Ms. Nirasha Kulasooriya",
     role: "University of Sri Jayewardenepura",
     email: "nirashakulasooriya@sjp.ac.lk",
-    quote: "Supporting the research direction, evaluation planning, and academic quality assurance.",
-    gradient: "linear-gradient(135deg, #4f46e5 0%, #7c3aed 65%, #2563eb 100%)",
+    quote:
+      "Supporting the research direction, evaluation planning, and academic quality assurance.",
+    gradient:
+      "linear-gradient(135deg, #4f46e5 0%, #7c3aed 65%, #2563eb 100%)",
+    photo: sup2Img, // ✅ added
   },
 ];
 
@@ -84,8 +101,8 @@ export default function TeamPage() {
           </h1>
 
           <p className="teamHero__sub">
-            Department of Information & Communication Technology · Faculty of Technology ·
-            University of Sri Jayewardenepura.
+            Department of Information & Communication Technology · Faculty of
+            Technology · University of Sri Jayewardenepura.
           </p>
 
           <div className="teamHero__miniLine" />
@@ -104,8 +121,21 @@ export default function TeamPage() {
               >
                 <div className="memberCard__ring">
                   <div className="memberCard__avatar">
-                    <span className="memberCard__initials">{initials(m.name)}</span>
+                    {/* ✅ show image if available, else fallback initials */}
+                    {m.photo ? (
+                      <img
+                        className="memberCard__img"
+                        src={m.photo}
+                        alt={m.name}
+                        loading="lazy"
+                      />
+                    ) : (
+                      <span className="memberCard__initials">
+                        {initials(m.name)}
+                      </span>
+                    )}
                   </div>
+
                   <div className="memberCard__reg">{m.reg}</div>
                 </div>
 
@@ -125,7 +155,10 @@ export default function TeamPage() {
                   </div>
                   <div className="memberCard__metaRow">
                     <span className="memberCard__metaIcon">📞</span>
-                    <a className="memberCard__link" href={`tel:${m.phone.replace(/[^0-9+]/g, "")}`}>
+                    <a
+                      className="memberCard__link"
+                      href={`tel:${m.phone.replace(/[^0-9+]/g, "")}`}
+                    >
                       {m.phone}
                     </a>
                   </div>
@@ -146,7 +179,21 @@ export default function TeamPage() {
         <div className="teamInner">
           <div className="superGrid">
             {SUPERVISORS.map((s) => (
-              <div key={s.email} className="superCard" style={{ backgroundImage: s.gradient }}>
+              <div
+                key={s.email}
+                className="superCard"
+                style={{ backgroundImage: s.gradient }}
+              >
+                {/* ✅ Supervisor image */}
+                <div className="superCard__imgWrap">
+                  <img
+                    className="superCard__img"
+                    src={s.photo}
+                    alt={s.name}
+                    loading="lazy"
+                  />
+                </div>
+
                 <div className="superCard__left">
                   <div className="superCard__badge">
                     <span className="superCard__cap">🎓</span> {s.badge}
@@ -167,7 +214,8 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-      <Footer   />
+
+      <Footer />
     </main>
   );
 }

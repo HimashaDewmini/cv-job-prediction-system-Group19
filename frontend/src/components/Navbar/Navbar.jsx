@@ -9,8 +9,8 @@ const NAV_LINKS = [
 
   // These are sections on the HOME page
   
-  { id: "methodology", label: "Methodology", type: "section" },
-  { id: "features", label: "Features", type: "section" },
+  { id: "methodology", label: "Methodology", type: "page", to: "/methodology" },
+  { id: "features", label: "Features", type: "page", to: "/feature" },
   { id: "results", label: "Results", type: "section" },
   { id: "team", label: "Team", type: "page", to: "/team" },
 ];

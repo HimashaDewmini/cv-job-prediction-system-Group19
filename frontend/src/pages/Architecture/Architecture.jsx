@@ -4,17 +4,26 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
 /* ── Scroll-in animation hook ── */
+/* ── Scroll-in animation hook ── */
 function useInView(threshold = 0.08) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
+
   useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) setVisible(true); },
+      ([e]) => {
+        if (e.isIntersecting) setVisible(true);
+      },
       { threshold }
     );
-    if (ref.current) obs.observe(ref.current);
+
+    obs.observe(node);
     return () => obs.disconnect();
-  }, []);
+  }, [threshold]); // ✅ include threshold
+
   return [ref, visible];
 }
 

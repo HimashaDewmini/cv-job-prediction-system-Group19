@@ -1,0 +1,445 @@
+/* ===== METHODOLOGY PAGE (clean blue theme like Team page) ===== */
+
+.methPage {
+  padding-top: 68px;
+  background: #ffffff;
+}
+
+/* shared container */
+.methInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* fade-in */
+.fadein {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fadein--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------
+   HERO
+------------------------------ */
+.methHero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 54px;
+  background: radial-gradient(1200px 500px at 50% -10%, rgba(37, 99, 235, 0.16), transparent 60%),
+              linear-gradient(180deg, #ffffff 0%, #f3f7ff 55%, #ffffff 100%);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.methHero__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 40px 0;
+  text-align: center;
+}
+
+.methHero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.methHero__badgeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
+}
+
+.methHero__title {
+  margin: 26px 0 12px;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.methHero__title span {
+  color: #2563eb;
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-underline-offset: 10px;
+}
+
+.methHero__sub {
+  margin: 0 auto;
+  max-width: 880px;
+  color: rgba(15, 23, 42, 0.55);
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+.methHero__miniLine {
+  width: 64px;
+  height: 6px;
+  border-radius: 999px;
+  margin: 22px auto 0;
+  background: linear-gradient(90deg, rgba(37,99,235,0.25), rgba(79,70,229,0.75), rgba(124,58,237,0.25));
+}
+
+/* decorations */
+.methHero__blob {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(85px);
+  pointer-events: none;
+}
+.methHero__blob--1 {
+  width: 520px;
+  height: 520px;
+  top: -180px;
+  left: -140px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.18), transparent 70%);
+}
+.methHero__blob--2 {
+  width: 520px;
+  height: 520px;
+  bottom: -220px;
+  right: -160px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.16), transparent 70%);
+}
+.methHero__dots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(37,99,235,0.14) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.22;
+}
+
+/* ------------------------------
+   SECTIONS
+------------------------------ */
+.methSection {
+  padding: 54px 0;
+}
+.methSection--alt {
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 55%, #ffffff 100%);
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.methTag {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin: 0 0 12px;
+}
+
+.methTitle {
+  margin: 0 0 12px;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #0f172a;
+}
+
+.methLead {
+  margin: 0 0 26px;
+  max-width: 820px;
+  color: rgba(15, 23, 42, 0.60);
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 600;
+}
+
+/* ------------------------------
+   STEPS
+------------------------------ */
+.methSteps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.stepCard {
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(243, 247, 255, 0.7), #ffffff 62%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 26px rgba(2, 6, 23, 0.07);
+  padding: 18px 16px 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stepCard::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(600px 180px at 50% 0%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.10);
+}
+
+.stepCard__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.stepCard__num {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 900;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.stepCard__icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.stepCard__title {
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -0.2px;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.stepCard__desc {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.62);
+  font-size: 12.5px;
+  line-height: 1.65;
+  font-weight: 650;
+}
+
+/* ------------------------------
+   METHOD GRID
+------------------------------ */
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.methodCard {
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.07);
+  padding: 18px 18px 16px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.methodCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(800px 240px at 50% 0%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 70%);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.methodCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(2, 6, 23, 0.10);
+}
+
+.methodCard__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.methodCard__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--accent) 12%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  font-size: 18px;
+}
+
+.methodCard__title {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.4px;
+  color: #0f172a;
+}
+
+.methodCard__list {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(15, 23, 42, 0.64);
+  font-size: 13.5px;
+  line-height: 1.75;
+  font-weight: 650;
+}
+
+/* ------------------------------
+   PIPELINE
+------------------------------ */
+.pipeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.pipeCard {
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(243, 247, 255, 0.55), #ffffff 70%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.07);
+  padding: 18px 18px 16px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.pipeCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(2, 6, 23, 0.10);
+}
+
+.pipeCard__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.pipeCard__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--accent) 12%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  font-size: 18px;
+}
+
+.pipeCard__title {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.4px;
+  color: #0f172a;
+}
+
+.pipeCard__sub {
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.55);
+  font-weight: 700;
+}
+
+.pipeCard__list {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(15, 23, 42, 0.62);
+  font-size: 13.5px;
+  line-height: 1.75;
+  font-weight: 650;
+}
+
+/* note */
+.methNote {
+  margin-top: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: 20px;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  padding: 16px 16px;
+}
+
+.methNote__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(37, 99, 235, 0.10);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  flex-shrink: 0;
+}
+
+.methNote__title {
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 4px;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+.methNote__text {
+  color: rgba(15, 23, 42, 0.62);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 13.5px;
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 1100px) {
+  .methSteps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1024px) {
+  .methInner {
+    padding: 0 24px;
+  }
+  .methodGrid {
+    grid-template-columns: 1fr;
+  }
+  .pipeGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .methHero__inner {
+    padding: 10px 18px 0;
+  }
+  .methTitle {
+    font-size: 28px;
+  }
+  .methSteps {
+    grid-template-columns: 1fr;
+  }
+}

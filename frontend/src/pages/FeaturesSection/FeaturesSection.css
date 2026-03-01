@@ -1,0 +1,239 @@
+/* ===== FEATURES SECTION (clean blue theme like Team/Methodology) ===== */
+
+.featSection {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 55%, #ffffff 100%);
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.featInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* fade-in */
+.fadein {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fadein--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* header */
+.featTag {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin: 0 0 12px;
+}
+
+.featTitle {
+  margin: 0 0 12px;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: clamp(30px, 3.8vw, 44px);
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #0f172a;
+  line-height: 1.08;
+}
+
+.featTitle span {
+  color: #2563eb;
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-underline-offset: 10px;
+}
+
+.featLead {
+  margin: 0 0 26px;
+  max-width: 860px;
+  color: rgba(15, 23, 42, 0.60);
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 650;
+}
+
+/* background decorations */
+.featBlob {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 1;
+}
+.featBlob--1 {
+  width: 520px;
+  height: 520px;
+  top: -220px;
+  left: -160px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.14), transparent 70%);
+}
+.featBlob--2 {
+  width: 520px;
+  height: 520px;
+  bottom: -240px;
+  right: -170px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12), transparent 70%);
+}
+.featDots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(37,99,235,0.14) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.18;
+  z-index: 1;
+}
+
+/* groups */
+.featGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.featGroup {
+  border-radius: 26px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.07);
+  overflow: hidden;
+  position: relative;
+}
+
+.featGroup::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    900px 260px at 50% 0%,
+    color-mix(in srgb, var(--accent) 12%, transparent),
+    transparent 70%
+  );
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.featGroup__head {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 20px 20px 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.featGroup__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--accent) 10%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  color: color-mix(in srgb, var(--accent) 90%, #0f172a);
+  flex-shrink: 0;
+}
+
+.featGroup__title {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.6px;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.featGroup__desc {
+  margin: 6px 0 0;
+  max-width: 840px;
+  color: rgba(15, 23, 42, 0.62);
+  font-weight: 650;
+  line-height: 1.75;
+  font-size: 14px;
+}
+
+/* cards grid inside group */
+.featGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 14px 20px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.featCard {
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(243, 247, 255, 0.62), #ffffff 70%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 16px 14px 14px;
+  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.featCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 38px rgba(2, 6, 23, 0.10);
+}
+
+.featCard__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--accent) 10%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.featCard__title {
+  font-weight: 900;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  color: #0f172a;
+  letter-spacing: -0.4px;
+  margin-bottom: 10px;
+}
+
+.featCard__list {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(15, 23, 42, 0.62);
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 650;
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+  .featGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1024px) {
+  .featInner {
+    padding: 0 24px;
+  }
+}
+@media (max-width: 640px) {
+  .featGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -443,3 +443,53 @@
     height: 128px;
   }
 }
+
+/* MEMBER image */
+/* MEMBER image - improved fit */
+.memberCard__avatar {
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  border: 6px solid rgba(255,255,255,0.95);
+  box-shadow: 0 10px 26px rgba(2, 6, 23, 0.10);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Better image scaling */
+.memberCard__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* keeps full professional crop */
+  object-position: center top; /* prevents face cut */
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* subtle zoom effect */
+.memberCard:hover .memberCard__img {
+  transform: scale(1.05);
+}
+
+/* SUPERVISOR image */
+.superCard__imgWrap{
+  width: 130px;
+  height: 130px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 4px solid rgba(255,255,255,0.65);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+  flex-shrink: 0;
+}
+
+.superCard__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
