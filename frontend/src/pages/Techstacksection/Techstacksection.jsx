@@ -352,14 +352,7 @@ const styles = `
   }
 `;
 
-const ARCH_NODES = [
-  { icon: "🧑‍💻", label: "UI", sub: "HTML+ CSS3" },
-  { icon: "🌐", label: "Flask API", sub: "Python 3.11" },
-  { icon: "📄", label: "PyMuPDF + OCR", sub: "EasyOCR" },
-  { icon: "🤖", label: "Groq LLaMA 3.3", sub: "LLM Engine" },
-  { icon: "📊", label: "TF-IDF Ranking", sub: "scikit-learn" },
-  { icon: "🗄️", label: "SQLite + CSV", sub: "Storage" },
-];
+
 
 export default function TechStackSection() {
     
