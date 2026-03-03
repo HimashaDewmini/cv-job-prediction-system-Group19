@@ -1,0 +1,502 @@
+/* ===== HOW TO USE PAGE (user-friendly + attention) ===== */
+
+.htSection {
+  position: relative;
+  overflow: hidden;
+  padding: 74px 0 86px;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 52%, #ffffff 100%);
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.htInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Fade-in */
+.htFade {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.htFade--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header */
+.htTag {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin: 0 0 12px;
+}
+
+.htTitle {
+  margin: 0 0 12px;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: clamp(30px, 3.8vw, 44px);
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #0f172a;
+  line-height: 1.08;
+}
+
+.htTitle span {
+  color: #2563eb;
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-underline-offset: 10px;
+}
+
+.htLead {
+  margin: 0 0 26px;
+  max-width: 920px;
+  color: rgba(15, 23, 42, 0.62);
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 650;
+}
+
+/* Background decorations */
+.htBlob {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 1;
+}
+.htBlob--1 {
+  width: 560px;
+  height: 560px;
+  top: -240px;
+  left: -190px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.14), transparent 70%);
+}
+.htBlob--2 {
+  width: 560px;
+  height: 560px;
+  bottom: -260px;
+  right: -200px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12), transparent 70%);
+}
+.htDots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(37, 99, 235, 0.14) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.18;
+  z-index: 1;
+}
+
+/* Layout */
+.htLayout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Side */
+.htSide {
+  position: sticky;
+  top: 90px;
+}
+
+.htSideCard {
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.07);
+  overflow: hidden;
+}
+
+.htSideTitle {
+  padding: 14px 14px 10px;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -0.4px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.htSideList {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+}
+
+.htSideItem {
+  width: 100%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: rgba(243, 247, 255, 0.62);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.htSideItem:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
+}
+
+.htSideItem--active {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.18);
+}
+
+.htSideBadge {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(37, 99, 235, 0.95);
+  background: rgba(37, 99, 235, 0.10);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  padding: 6px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.htSideText {
+  font-weight: 850;
+  color: #0f172a;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.htSideFooter {
+  padding: 12px;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.htTopBtn {
+  width: 100%;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(15, 23, 42, 0.04);
+  border-radius: 14px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.82);
+}
+
+/* Main steps */
+.htMain {
+  display: grid;
+  gap: 14px;
+}
+
+.htStep {
+  border-radius: 26px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.07);
+  overflow: hidden;
+  position: relative;
+  padding: 18px;
+}
+
+.htStep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(900px 260px at 50% 0%, rgba(37, 99, 235, 0.10), transparent 70%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.htStepHead {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.htStepBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  background: rgba(37, 99, 235, 0.10);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  color: rgba(37, 99, 235, 0.95);
+  flex-shrink: 0;
+}
+
+.htStepTitle {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -0.6px;
+  font-size: 18px;
+}
+
+.htStepDesc {
+  margin: 6px 0 0;
+  color: rgba(15, 23, 42, 0.62);
+  font-weight: 650;
+  line-height: 1.75;
+  font-size: 13.5px;
+}
+
+/* Step grid */
+.htStepGrid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 14px;
+  align-items: start;
+}
+
+/* Screenshot */
+.htShot {
+  padding: 0;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: linear-gradient(180deg, rgba(243, 247, 255, 0.62), #ffffff 70%);
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+}
+
+.htShot:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px rgba(2, 6, 23, 0.10);
+}
+
+.htShotTop {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 0;
+}
+
+.htZoom {
+  font-size: 11px;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.55);
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.htShot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+/* Bullets + Tip */
+.htStepBody {
+  display: grid;
+  gap: 12px;
+}
+
+.htBullets {
+  display: grid;
+  gap: 10px;
+}
+
+.htBullet {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(243, 247, 255, 0.62);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  color: rgba(15, 23, 42, 0.74);
+  font-weight: 650;
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.htBulletDot {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  color: rgba(16, 185, 129, 0.95);
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.htTip {
+  border-radius: 18px;
+  padding: 12px;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.htTipTitle {
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.htTipText {
+  color: rgba(15, 23, 42, 0.62);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+/* Step nav buttons */
+.htActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.htNavBtn {
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  background: #2563eb;
+  color: #fff;
+  font-weight: 900;
+  border-radius: 14px;
+  padding: 10px 12px;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.22);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.htNavBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.30);
+}
+
+.htNavBtn--ghost {
+  background: rgba(37, 99, 235, 0.08);
+  color: rgba(37, 99, 235, 0.95);
+  box-shadow: none;
+}
+
+/* Modal */
+.htModal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.htModalBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.62);
+  border: none;
+}
+
+.htModalCard {
+  position: relative;
+  width: min(1100px, 96vw);
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 22px;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow: 0 26px 80px rgba(2, 6, 23, 0.35);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.htModalTop {
+  padding: 14px 14px 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.htModalTitle {
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -0.4px;
+}
+
+.htModalDesc {
+  margin-top: 4px;
+  color: rgba(15, 23, 42, 0.62);
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.htModalClose {
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(15, 23, 42, 0.04);
+  border-radius: 12px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.htModalImgWrap {
+  padding: 12px;
+  overflow: auto;
+}
+
+.htModalImgWrap img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .htLayout {
+    grid-template-columns: 1fr;
+  }
+  .htSide {
+    position: relative;
+    top: auto;
+  }
+  .htStepGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .htInner {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .htModal {
+    padding: 10px;
+  }
+  .htStep {
+    padding: 14px;
+  }
+}

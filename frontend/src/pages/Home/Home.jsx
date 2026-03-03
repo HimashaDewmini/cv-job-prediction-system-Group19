@@ -4,7 +4,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 
-
 /* ── tiny hook for scroll-in animations ── */
 /* ── tiny hook for scroll-in animations ── */
 function useInView(threshold = 0.12) {
@@ -180,7 +179,7 @@ const SURVEY_BARS = [
 ];
 
 export default function HomePage({ onGetStarted }) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <main className="home">
       <Navbar />
@@ -207,12 +206,12 @@ export default function HomePage({ onGetStarted }) {
             <p className="hero__sub">
               AI-powered CV analysis based on real HR surveys and local industry
               standards. Get instant feedback, dimension scores, and matched job
-              recommendations — completely free.
+              recommendations completely free.
             </p>
 
             <div className="hero__actions">
-              <button className="btn btn--primary" onClick={onGetStarted}>
-                Analyse My CV →
+              <button className="btn btn--primary" onClick={() => navigate("/HowToUse")}>
+                How to use →
               </button>
 
               <button
@@ -359,7 +358,7 @@ export default function HomePage({ onGetStarted }) {
               <p className="rh__desc">
                 We surveyed HR professionals at Dialog Axiata, Virtusa, IFS,
                 WSO2, and CodeGen International to identify exactly what
-                recruiters look for — then encoded those expectations directly
+                recruiters look for then encoded those expectations directly
                 into the validation engine.
               </p>
               <div className="rh__pills">

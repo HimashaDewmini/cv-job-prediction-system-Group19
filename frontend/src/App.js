@@ -8,6 +8,7 @@ import Methodology from './pages/Methodology/Methodology';
 import FeaturesSection from './pages/FeaturesSection/FeaturesSection';
 import ResultsSection from './pages/ResultsSection/ResultsSection';
 import TechStackSection from './pages/Techstacksection/Techstacksection';
+import HowToUse from './pages/HowToUse/HowToUse'; 
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <Route path ="/feature" element ={<FeaturesSection/>}/>
           <Route path ="/results" element ={<ResultsSection/>}/>
           <Route path ="/techstack" element ={<TechStackSection/>}/>
+          <Route path ="/howtouse" element ={<HowToUse/>}/>
         </Routes>
 
 

@@ -4,9 +4,9 @@ import "./Team.css";
 import Footer from "../../components/Footer/Footer";
 
 /* ✅ Import images from assets folder */
-import member1Img from "../../assets/member1.png";
-import member2Img from "../../assets/member2.jpg";
-import member3Img from "../../assets/member3.png";
+import member1Img from "../../assets/member1.jpeg";
+import member2Img from "../../assets/member2.jpeg";
+import member3Img from "../../assets/member3.jpeg";
 
 import sup1Img from "../../assets/supervisor1.jpeg";
 import sup2Img from "../../assets/supervisor2.webp";

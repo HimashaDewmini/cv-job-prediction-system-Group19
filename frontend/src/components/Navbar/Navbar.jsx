@@ -12,9 +12,11 @@ const NAV_LINKS = [
   { id: "methodology", label: "Methodology", type: "page", to: "/methodology" },
   { id: "features", label: "Features", type: "page", to: "/feature" },
   { id: "results", label: "Results", type: "page", to: "/results" },
+   { id: "techstack", label: "Tech Stack", type: "page", to: "/techstack" },
+
   { id: "team", label: "Team", type: "page", to: "/team" },
-  { id: "techstack", label: "Tech Stack", type: "page", to: "/techstack" },
-];
+  ];
+ 
 
 export default function Navbar({ activeSection }) {
   const [scrolled, setScrolled] = useState(false);
