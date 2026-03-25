@@ -60,7 +60,7 @@ const STEPS = [
   {
     step: "04",
     title: "Implementation",
-    desc: "Built Flask API + React UI, CV extraction with PyMuPDF, OCR fallback, and TF-IDF job matching.",
+    desc: "Built Flask API + UI, CV extraction with PyMuPDF, OCR fallback, and TF-IDF job matching.",
     icon: "⚙️",
     color: "#0ea5e9",
   },
@@ -88,7 +88,7 @@ const METHODS = [
     title: "Data Sources",
     points: [
       "CV samples (PDF/Word) uploaded by users",
-      "Live IT job data from TopJobs.lk and Ikman.lk",
+      "Live IT job data from TopJobs.lk ",
       "Survey results from HR/recruiters (local industry expectations)",
     ],
     icon: "🗂️",
